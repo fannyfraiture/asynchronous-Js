@@ -19,5 +19,3 @@
         console.log(data)
     });
 })();
-© 2021 GitHub, Inc.
-Terms
