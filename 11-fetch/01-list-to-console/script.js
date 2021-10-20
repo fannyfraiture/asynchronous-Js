@@ -19,6 +19,7 @@
         // 3. display the response in the console
         // NB: here we use an async await function, you can convert it 
         //     in a Promise or callbacks functions if you prefer 
+            console.log(await response.json());
         
     });
 })();

@@ -16,8 +16,14 @@
 
     document.querySelector("#run").addEventListener("click", async () => {
         const response = await fetch("http://localhost:3000/heroes");
-
-        // your code here
+        const data = await response.json()
         
+        data.forEach(hero => {
+            let clone = document.importNode(tpl.content, true)
+            clone.querySelector('.name').textContent = hero.name
+            clone.querySelector('.alter-ego').textContent = hero.alterEgo
+            clone.querySelector('.powers').textContent = hero.abilities
+            target.appendChild(clone) 
+        });
     });
 })();

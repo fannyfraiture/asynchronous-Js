@@ -8,7 +8,16 @@
 
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
-
 (() => {
-    // your code here
+    const input = document.querySelector("#hero-id")
+
+    document.querySelector('#run').addEventListener("click", async () => {
+        const response = await fetch("http://localhost:3000/heroes/"+input.value, {
+            method: 'DELETE'
+        });
+        const data = await response.json()
+        console.log(data)
+    });
 })();
+© 2021 GitHub, Inc.
+Terms
