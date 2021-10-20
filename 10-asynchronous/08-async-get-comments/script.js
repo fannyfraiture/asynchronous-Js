@@ -10,5 +10,11 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.querySelector("#run").addEventListener("click", async() => {
+        const posts = await window.locationbar.getPosts();
+        for( let post of posts) {
+            post.comments = await window.locationbar.getComments(posts.id)
+        }
+        console.log(posts)
+    })
 })();
