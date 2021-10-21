@@ -11,6 +11,23 @@
 
 (() => {
     document.querySelector("#run").addEventListener("click", async () => {
+
+        // Steps :
+        // 1. read the Fetch documentation
+        const response = await fetch("http://localhost:3000/heroes");
+
+        // 2. you must convert the response in a json format
+        let heroes = await response.json()
+
+        // 3. display the response in the console
+        console.log(heroes);
+    });
+
+})();
+
+/*
+(() => {
+    document.querySelector("#run").addEventListener("click", async () => {
         const response = await fetch("http://localhost:3000/heroes");
 
         // Steps :
@@ -23,3 +40,4 @@
         
     });
 })();
+*/
